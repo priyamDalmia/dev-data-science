@@ -37,6 +37,46 @@ local plugins = {
      end,
   },
 
+  -- lsp + configs 
+  ['williamboman/nvim-lsp-installer'] = {},
+
+  ["neovim/nvim-lspconfig"] = {
+    opt = true,
+    event = "BufRead",
+    wants = { "nvim-lsp-installer" },
+    config = function()
+      require("plugins.config.lsp").setup()
+    end,
+    requires = {
+      "williamboman/nvim-lsp-installer",
+    },
+  },
+
+  -- nvim treesitter 
+  ["nvim-treesitter/nvim-treesitter"] = {
+    module = "nvim-treesitter",
+    run = ":TSUpdate",
+    event = {"BufRead", "BufNewFile"},
+    cmd = { 
+      "TSInstall",
+      "TSBufEnable",
+      "TSBufDisable",
+      "TSEnable",
+      "TSDisable",
+      "TSModuleInfo",}, 
+    config = function()
+      require "plugins.config.treesitter"
+    end,
+  },
+
+  -- indent lines
+  ["lukas-reineke/indent-blankline.nvim"] = {
+    config = function()
+      require("plugins.config.others").indentlines()
+    end
+  },
+
+
 
 }
 
