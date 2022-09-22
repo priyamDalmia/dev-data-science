@@ -22,3 +22,13 @@ map("n", "<S-k>", ":move .-2<CR>==")
 -- INSERT mode
 -- <Esc> using ';;'
 map("i", ";;", "<ESC>")
+
+
+-- Nvimtree shortcuts
+map("n", "<leader>e", ":NvimTreeToggle<CR>")
+map("n", "<leader>ee", ":NvimTreeFocus<CR>")
+
+-- Telescope shortcuts 
+map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
+map("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
+map("n", "<leader>tk", "<cmd> Telescope keymaps <CR>")

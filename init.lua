@@ -12,4 +12,4 @@ require "plugins"
 -- initialize the keymaps 
 require "core.keymaps"
 
--- extra settings go here
+-- extra settings go here 
