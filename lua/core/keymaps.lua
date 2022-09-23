@@ -39,3 +39,5 @@ map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>")
 map("n", "gr", ":lua vim.lsp.buf.references()<CR>")
 map("n", "H", ":lua vim.lsp.buf.hover()<CR>")
 
+map("n", "<A-`>", ":ToggleTerm<CR>")
+map("t", ";;", [[<C-\><C-n>]])

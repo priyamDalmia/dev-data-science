@@ -12,7 +12,7 @@ opt.termguicolors = true
 opt.fileencoding = "utf-8"
 
 -- laststatus
-opt.laststatus = 0
+vim.cmd("set noshowmode")
 
 -- disable nvim intro 
 opt.shortmess:append "sI"

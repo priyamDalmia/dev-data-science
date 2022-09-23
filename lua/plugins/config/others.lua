@@ -23,5 +23,27 @@ M.indentlines = function()
   ilines.setup(options)
 end
 
+M.autopairs = function()
+  local present, ap = pcall(require, "nvim-autopairs")
+
+  if not present then
+    return
+  end
+
+  ap.setup({})
+end
+
+M.toggleterm = function()
+  local present, tg = pcall(require, "toggleterm")
+
+  if not present then
+    return
+  end
+
+  local options = {}
+
+  tg.setup(options)
+end
+
 return M
 

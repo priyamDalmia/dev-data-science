@@ -68,15 +68,29 @@ local plugins = {
       require "plugins.config.treesitter"
     end,
   },
-
   -- indent lines
   ["lukas-reineke/indent-blankline.nvim"] = {
     config = function()
       require("plugins.config.others").indentlines()
     end
   },
-
-
+  ["windwp/nvim-autopairs"] = {
+    config = function()
+      require("plugins.config.others").autopairs()
+    end
+  },
+  -- toggle term
+  ["akinsho/toggleterm.nvim"] = {
+    config = function()
+      require("plugins.config.others").toggleterm()
+    end
+  },
+  
+  ["nvim-lualine/lualine.nvim"] = {
+    config = function()
+      require "plugins.config.lualine"
+    end
+  },
 
 }
 
