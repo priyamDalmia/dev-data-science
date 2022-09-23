@@ -79,8 +79,3 @@ local options = {
 
 nvimtree.setup(options)
 
-
--- keymaps
-map("n", "<leader>e", ":NvimTreeToggle<CR>")
-map("n", "<leader>ee", ":NvimTreeFocus<CR>")
-

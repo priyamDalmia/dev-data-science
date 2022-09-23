@@ -1,13 +1,15 @@
 local lsp_installer_servers = require "nvim-lsp-installer.servers"
 local utils = require "core.utils"
-
+local map = require("core.utils").map
 local M = {}
 
-M.keymaps = function()
+M.keymaps = function(client, bufnr)
   local keymap = vim.api.nvim_set_keymap
   local buf_keymap = vim.api.nvim_buf_set_keymap
 
   -- lsp keymaps 
+  map("n", "[d", "<cmd>lua vim.lsp.buf.hover()<CR>")
+
 end
 
 M.setup = function(servers, options)

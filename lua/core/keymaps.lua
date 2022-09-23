@@ -23,12 +23,19 @@ map("n", "<S-k>", ":move .-2<CR>==")
 -- <Esc> using ';;'
 map("i", ";;", "<ESC>")
 
-
--- Nvimtree shortcuts
+-- keymap - Nvimtree
 map("n", "<leader>e", ":NvimTreeToggle<CR>")
 map("n", "<leader>ee", ":NvimTreeFocus<CR>")
 
--- Telescope shortcuts 
+-- keymaps - Telescope 
 map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
 map("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
-map("n", "<leader>tk", "<cmd> Telescope keymaps <CR>")
+map("n", "<leader>fk", "<cmd> Telescope keymaps <CR>")
+map("n", "<leader>fm", "<cmd> Telescope marks <CR>")
+
+-- keymaps - LSP
+map("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
+map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>")
+map("n", "gr", ":lua vim.lsp.buf.references()<CR>")
+map("n", "H", ":lua vim.lsp.buf.hover()<CR>")
+
