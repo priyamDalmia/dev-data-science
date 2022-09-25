@@ -19,7 +19,16 @@ M.setup = function(servers, options)
     if server_available then
       server:on_ready(function()
         local opts = vim.tbl_deep_extend("force", options, servers[server.name] or {})
-        server:setup(opts)
+        -- For coq.nvim
+        local present, coq = pcall(require, "coq")
+
+        if present then
+          server:setup(coq.lsp_ensure_capabilities(opts))
+        end
+
+        if not present then
+          server:setup(opts)
+        end
       end)
 
       if not server:is_installed() then
